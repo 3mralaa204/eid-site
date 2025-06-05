@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد أضحى سعيد</title>
+    <style>
+        @font-face {
+            font-family: 'FavoritBold';
+            src: url('fonts/ABC-Favorit-Arabic-Bold.woff2') format('woff2');
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'FavoritBold', sans-serif;
+            background: #2d0f91;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            position: relative;
+            width: 768px;
+            height: 960px;
+            background: url('design.jpg') no-repeat center/contain;
+        }
+        .name {
+            position: absolute;
+            bottom: 150px;
+            right: 80px;
+            font-size: 18pt;
+            color: #0feaa6;
+        }
+        input {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name" id="customName">علاء محمد</div>
+    </div>
+    <input type="text" placeholder="اكتب اسمك هنا" oninput="changeName(this.value)" />
+    <script>
+        function changeName(name) {
+            document.getElementById('customName').textContent = name || 'علاء محمد';
+        }
+    </script>
+</body>
+</html>
